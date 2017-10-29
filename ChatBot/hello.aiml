@@ -1,226 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-
-<aiml version="1.0"><category><pattern>HELLO</pattern><template><condition><li name="name" value="">What can I call you?</li><li><srai>HELLO1</srai></li></condition></template></category><category><pattern>HELLO1</pattern><template><random><li>Well hello there!</li><li>Hi there!</li><li>Hello!</li><li>Hello there <get name="name"/>!</li><li>Oh, hello again!</li></random></template></category>
-<category>
-<pattern>* BYE</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-<category>
-<pattern>BY</pattern>
-<template>
-Do you mean "bye"?
-</template>
-</category>
-<category>
-<pattern>BYE</pattern>
-<template>
-<random>
-<li>See you later <get name="name"/>.</li>
-<li>Goodbye <get name="name"/>.</li>
-<li>Until next time <get name="name"/>.</li>
-<li>Thanks for chatting, <get name="name"/>.</li>
-<li>Bye bye <get name="name"/>.</li>
-</random>
-</template>
-</category>
-
-<category>
-<pattern>BYE *</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-<category>
-<pattern>BYE BYE</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-<category>
-<pattern>BYE BYE *</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-<category>
-<pattern>BYEBYE</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-<category>
-<pattern>BYEBYE *</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-<category>
-<pattern>CYA *</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-<category>
-<pattern>GET LOST</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-<category>
-<pattern>GO * YOURSELF</pattern>
-<template>
-A simple "goodbye" will do.
-</template>
-</category>
-
-<category>
-<pattern>GO AWAY *</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-<category>
-<pattern>GOOD BYE</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-<category>
-<pattern>GOOD BYE *</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-<category>
-<pattern>GOOD DAY</pattern>
-<template>
-<srai>HELLO</srai>
-</template>
-</category>
-
-<category>
-<pattern>GOODBYE</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-<category>
-<pattern>HELLO *</pattern>
-<template>
-<srai>HELLO</srai>
-</template>
-</category>
-
-<category>
-<pattern>HELLO <bot name="name"/></pattern>
-<template>
-<srai>HELLO</srai>
-</template>
-</category>
-
-<category>
-<pattern>HELLO AGAIN</pattern>
-<template>
-<srai>HELLO</srai>
-</template>
-</category>
-
-<category>
-<pattern>HELLO HOW ARE YOU</pattern>
-<template>
-I am fine thank you, how are you?
-</template>
-</category>
-
-<category>
-<pattern>HELLO THERE</pattern>
-<template>
-<srai>HELLO</srai>
-</template>
-</category>
-
-<category>
-<pattern>HELLOW</pattern>
-<template>
-<srai>HELLO</srai>
-</template>
-</category>
-
-<category>
-<pattern>HEY THERE</pattern>
-<template>
-<srai>HELLO</srai>
-</template>
-</category>
-
-<category>
-<pattern>HI</pattern>
-<template>
-<srai>HELLO</srai>
-</template>
-</category>
-
-<category>
-<pattern>HI</pattern>
-<that>WHAT CAN I CALL YOU</that>
-<template>
-<srai>HELLO</srai>
-</template>
-</category>
-
-<category>
-<pattern>HI <bot name="name"/></pattern>
-<template>
-<srai>HELLO</srai>
-</template>
-</category>
-
-<category>
-<pattern>HI THERE *</pattern>
-<template>
-<sr/>  <srai>HELLO</srai>
-</template>
-</category>
-
-<category>
-<pattern>I AM LEAVING</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-<category>
-<pattern>I MUST GO</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-
-<category>
-<pattern>I SAID HELLO</pattern>
-<template>
-<srai>HELLO</srai>
-</template>
-</category>
-
-<category>
-<pattern>_ BYE</pattern>
-<template>
-<srai>BYE</srai>
-</template>
-</category>
-
-</aiml>
