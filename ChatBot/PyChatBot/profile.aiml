@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<aiml version="1.0">
+<category><pattern>*</pattern><template>	<random>	<li>I don't think i quite understand...</li>	<li>What??</li>	<li>Say again please</li>	<li>Ok...</li>	</random></template></category>
+<category>
+<pattern>_</pattern>
+<that>WHO AM I TALKING TO</that>
+<template>
+<think><set name="name"><formal><star/></formal></set></think>
+Nice to meet you <get name="name"/>.
+</template>
+</category>
+
+
+<category>
+<pattern>*</pattern>
+<that>WHAT IS YOUR OCCUPATION</that>
+<template>
+<think><set name="job"><star/></set></think>
+That is interesting.<br />
+<srai>ASK ME SOMETHING</srai>
+</template>
+</category>
+
+
+<category>
+<pattern>AM I A STUDENT</pattern>
+<template>
+We are all students in some way.
+</template>
+</category>
+
+<category>
+<pattern>AM I BORING YOU</pattern>
+<template>
+Not at all, <get name="name"/>.  You seem very interesting to me.
+</template>
+</category>
+<category><pattern>NONE</pattern><template>Ok</template></category>
+<category>
+<pattern>ASK ME SOMETHING</pattern>
+<template>
+<random>
+<li><srai>ASKRANDOMQUESTION</srai></li> 
+</random>
+</template>
+</category>
+
+<category>
+<pattern>ASKQUESTION1</pattern>
+<template>
+<condition>
+<li name="age" value="">How old are you?</li>  
+<li name="job" value="">What is your occupation?</li> 
+<li><srai>ASKRANDOMQUESTION</srai></li> 
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>ASKQUESTION2</pattern>
+<template>
+<condition>
+<li name="name" value="">What is your name?</li>
+<li name="name" value="">What color is your hair?</li>
+<li name="name" value="">What color are your eyes?</li> 
+<li><srai>ASKRANDOMQUESTION</srai></li> 
+</condition>
+</template>
+</category><category><pattern>WHAT IS MY NAME</pattern><template><srai>WHO AM I TALKING TO</srai></template></category>
+
+<category>
+<pattern>ASKRANDOMQUESTION</pattern>
+<template>
+<random>
+<li>"<that/>"? <star/>?</li>
+<li>Are we still talking about <get name="topic"/>?</li>
+<li>Are you free?</li>
+<li>Are you happy?</li>
+<li>Ask me something.</li>
+<li>By the way, do you mind if I ask you a personal question?</li>
+<li>Can we be friends?</li>
+<li>Can you please rephrase that with fewer ideas, or different thoughts?</li>
+<li>Can you speak any foreign languages?</li>
+<li>Can you tell me any gossip?</li>
+<li>Did you know that you can download your own chat robot and create your own robot
+personality?</li>
+<li>Do you believe in god?</li>
+<li>Who is your favorite science fiction author?</li>
+</random>
+</template>
+</category>
+<category>
+<pattern>I AM 20</pattern>
+<template>
+<srai>I AM 20 YEARS OLD</srai>
+</template>
+</category>
+
+<category>
+<pattern>I AM 20 *</pattern>
+<template>
+<srai>I AM 20 YEARS OLD</srai>
+</template>
+</category>
+
+<category>
+<pattern>I AM 50</pattern>
+<template>
+<srai>I AM 50 YEARS OLD</srai>
+</template>
+</category>
+
+<category>
+<pattern>I AM 50 *</pattern>
+<template>
+<srai>I AM 50 YEARS OLD</srai>
+</template>
+</category>
+
+<category>
+<pattern>I AM 69</pattern>
+<template>
+<srai>I AM 69 YEARS OLD</srai>
+</template>
+</category>
+
+<category>
+<pattern>I AM 69 *</pattern>
+<template>
+<srai>I AM 69 YEARS OLD</srai>
+</template>
+</category>
+
+<category>
+<pattern>I AM A *</pattern>
+<that>WHAT IS YOUR OCCUPATION</that>
+<template>
+That is interesting.<br />
+<think><set name="job"><star/></set></think>
+<srai>ASK ME SOMETHING</srai>
+</template>
+</category>
+
+<category>
+<pattern>I AM A DOCTOR</pattern>
+<template>
+<think><set name="job">doctor</set></think>
+That's nice.
+</template>
+</category>
+
+<category>
+<pattern>I AM A LAWYER</pattern>
+<template>
+<think><set name="job">lawyer</set></think>
+Which law school would you recommend to me?  I want to be a lawyer too.
+</template>
+</category>
+
+<category>
+<pattern>I AM A PERSON</pattern>
+<template>
+I know you are.
+</template>
+</category>
+
+<category>
+<pattern>I AM CRYING</pattern>
+<template>
+What is wrong, <get name="name"/>?
+</template>
+</category>
+<category>
+<pattern>I AM _ YEARS OLD</pattern>
+<template>
+<think><set name="age"><star/></set></think>
+<random>
+<li>Only <star/>? You are quite mature.</li>
+<li>You are too old for me.</li>
+<li>Can you explain how it feels to be <star/> years old?</li>
+<li>Oh, you were born in the 20th century!</li>
+<li>What are the advantages to being <star/> years old?</li>
+</random>
+</template>
+</category><category>	<pattern>YES</pattern>	<template>Ok..</template></category><category> 	<pattern>NO</pattern>	<template>		<random>			<li>Are you sure?</li>			<li>If you say so..</li>			<li>Okay</li>		</random>	</template></category>
+<category>	<pattern>WHAT IS MY JOB</pattern>	<template>You said you were a <get name="job"/></template></category>
+<category>
+<pattern>I AM A *</pattern>
+<that>WHAT IS YOUR OCCUPATION</that>
+<template>
+<think><set name="job"><star/></set></think>
+That is interesting.<br />
+<srai>ASK ME SOMETHING</srai>
+</template>
+</category>
+
+<category>
+<pattern>INACTIVITYQUESTIONS</pattern>
+<template>
+<condition>
+<li name="name" value="undefined">What can I call you?</li>
+<li><srai>ASK ME SOMETHING</srai></li> 
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>MY BIRTHDAY IS *</pattern>
+<template>
+Being born <set name="birthday"><star/></set> is very lucky.
+</template>
+</category>
+<category> 	<pattern> WHAT IS MY NAME</pattern>	<template> 		<random>			<li>Your name is <get name="name"/>, silly!</li> 			<li>Verry funny, <get name="name"/>!</li>		</random>	</template></category><category>	<pattern>* MY NAME</pattern>	<template> 		<srai>WHAT IS MY NAME</srai>	</template></category>
+<category>
+<pattern>MY NAME IS *</pattern>
+<template>
+<think><set name="name"><formal><star/></formal></set></think>
+<get name="name"/>, nice to meet you!
+</template>
+</category>
+
+<category>
+<pattern>MY NAME IS NOT *</pattern>
+<template>
+Oh I'm sorry. What is your name?
+</template>
+</category>
+<category>
+<pattern>WHAT DO YOU KNOW ABOUT ME</pattern>
+<template>
+Name: <get name="name"/>Age: <get name="age"/>Job: <get name="job"/>
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS MY AGE</pattern>
+<template>
+You said you were <get name="age"/> years old.
+</template>
+</category>
+<category><pattern>WHO TALKED WITH YOU</pattern><template>Hmm...</template></category>
+
+</aiml>
